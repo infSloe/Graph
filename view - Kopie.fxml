@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Graphen!">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="552.0" prefWidth="210.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#neu" text="neuer Graph" />
+                  <Button mnemonicParsing="false" onAction="#karte" prefHeight="25.0" prefWidth="82.0" text="Karte" />
+               </children>
+            </HBox>
+            <TextField fx:id="txtNeuerKnoten" onAction="#einfuegen" prefHeight="25.0" prefWidth="87.0" promptText="neuer Knoten" />
+            <ToggleButton fx:id="btnKanten" mnemonicParsing="false" text="Kanten bearbeiten" />
+            <Separator prefWidth="200.0" />
+            <Label text="Knotenliste " />
+            <Label fx:id="ausgabe" text="Knotenliste">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="211.0" text="Adjazenzmatrix" />
+            <Label fx:id="lblMatrix" text="Adjazenzmatrix">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox spacing="10.0">
+               <children>
+                  <TextField fx:id="txtVon" promptText="von" />
+                  <TextField fx:id="txtNach" promptText="nach" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#tiefensuche" text="Tiefensuche" />
+            <Label fx:id="ausgabe" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="stackpane" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding></StackPane>
+   </center>
+</BorderPane>
