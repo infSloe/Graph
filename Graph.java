@@ -32,7 +32,8 @@ public class Graph
      */
     public void  knotenEinfuegen(String inhalt)
     {
-
+        Knoten k = new Knoten(inhalt);
+        
         // Hier gibt es etwas zu tun        
     }
 
